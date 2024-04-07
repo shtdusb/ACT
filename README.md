@@ -1,13 +1,13 @@
-# Re-thinking the Label Memorization in Noisy Label Learning: An Asymmetric Co-Training Optimization Strategy
+# Re-thinking the Label Memorization in Noisy Label Learning: An Asymmetric Co-Training Strategy
 **Abstract:** Label noise is inevitable in classification model learning, particularly when dealing with large-scale database annotations obtained through web-crawling or crowd-sourcing. 
-The symmetric co-training optimization strategy is widely adopted by existing methods, leveraging the diverse learning capabilities of the two models to guide each other during training.
+The symmetric co-training strategy is widely adopted by existing methods, leveraging the diverse learning capabilities of the two models to guide each other during training.
 However, the additional learning information gained from different random initializations is very limited, and the models tend to converge in the later stages.
-To this end, we propose an Asymmetric Co-Training Optimization strategy, called ACTO, to deal with label noise.
+To this end, we propose an Asymmetric Co-Training strategy, called ACT, to deal with label noise.
 Specifically, we simultaneously train two models but employ robust (i.e., training under the selected clean subset) and non-robust (i.e., training under the entire noisy dataset) training strategies separately. 
 Through a positive feedback mechanism, we design an asymmetric sample selection criteria to continually optimize the robust model's performance against label noise.
 To better exploit the diverse learning information offered by the non-robust model, we propose mining more valuable "clean" samples for the robust model before the non-robust model undergoes label memorization.
 Besides, we design a self-adaptive metric to measure the degree of label memorization exhibited by the non-robust model.
-Finally, we propose utilizing the historical training states to foster the reliability and adaptivity of the selected and mined "clean" samples following our ACTO.
+Finally, we propose utilizing the historical training states to foster the reliability and adaptivity of the selected and mined "clean" samples following our ACT.
 Extensive experimental results on synthetic and real-world datasets demonstrate the effectiveness and superiority of our proposed method.
 
 
