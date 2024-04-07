@@ -12,11 +12,11 @@ Extensive experimental results on synthetic and real-world datasets demonstrate 
 
 
 # Pipeline
-The differences between existing symmetric co-training optimization strategies :
+The differences between existing symmetric co-training strategies :
 
 ![framework](Figure1.png)
 
-The overall framework of our proposed ACTO:
+The overall framework of our proposed ACT:
 
 ![framework](Figure.png)
 
@@ -38,23 +38,23 @@ You can download Food101N from [here](https://kuanghuei.github.io/Food-101N/).
 
 # Training
 
-An example shell script to run ACTO on CIFAR-100N :
+An example shell script to run ACT on CIFAR-100N :
 
 ```python
 main.py --gpu 0  --noise-type symmetric --closeset-ratio 0.2 --dataset cifar100nc
 ```
-An example shell script to run ACTO on CIFAR-80N :
+An example shell script to run ACT on CIFAR-80N :
 
 ```python
 main.py --gpu 0  --noise-type symmetric --closeset-ratio 0.2 --dataset cifar80no
 ```
-Here is an example shell script to run ACTO on Web-Aircraft :
+Here is an example shell script to run ACT on Web-Aircraft :
 
 ```python
 main_web.py --gpu 0 --dataset web-aircraft
 ```
 
-Here is an example shell script to run ACTO on Food101N :
+Here is an example shell script to run ACT on Food101N :
 
 ```python
 main_food101n.py --gpu 9  --warmup-epoch 5 --epoch 50 --batch-size 100 --lr 0.0005 --lr1 0.001 --warmup-lr 0.001  --lr-decay cosine:5,5e-5,50 --opt sgd --dataset food101n
