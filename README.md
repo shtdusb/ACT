@@ -12,7 +12,7 @@ Extensive experimental results on synthetic and real-world datasets demonstrate 
 
 
 # Pipeline
-The differences between existing symmetric co-training strategies :
+The differences between existing symmetric co-training strategies:
 
 ![framework](Figure1.png)
 
