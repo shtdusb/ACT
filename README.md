@@ -1,14 +1,14 @@
-# Re-thinking the Label Memorization in Noisy Label Learning: An Asymmetric Co-Training Strategy
-**Abstract:** Label noise is inevitable in classification model learning, particularly when dealing with large-scale database annotations obtained through web-crawling or crowd-sourcing. 
-The symmetric co-training strategy is widely adopted by existing methods, leveraging the diverse learning capabilities of the two models to guide each other during training.
-However, the additional learning information gained from different random initializations is very limited, and the models tend to converge in the later stages.
-To this end, we propose an Asymmetric Co-Training strategy, called ACT, to deal with label noise.
-Specifically, we simultaneously train two models but employ robust (i.e., training under the selected clean subset) and non-robust (i.e., training under the entire noisy dataset) training strategies separately. 
-Through a positive feedback mechanism, we design an asymmetric sample selection criteria to continually optimize the robust model's performance against label noise.
-To better exploit the diverse learning information offered by the non-robust model, we propose mining more valuable "clean" samples for the robust model before the non-robust model undergoes label memorization.
-Besides, we design a self-adaptive metric to measure the degree of label memorization exhibited by the non-robust model.
-Finally, we propose utilizing the historical training states to foster the reliability and adaptivity of the selected and mined "clean" samples following our ACT.
-Extensive experimental results on synthetic and real-world datasets demonstrate the effectiveness and superiority of our proposed method.
+# Enhancing Robustness in Learning with Noisy Labels: An Asymmetric Co-Training Approach 
+**Abstract:** Label noise, an inevitable issue in various real-world datasets, tends to impair the performance of deep neural networks.
+A large body of literature focuses on symmetric co-training, aiming to enhance model robustness by exploiting interactions between models with distinct capabilities.
+However, the symmetric training processes employed in existing methods often culminate in model consensus, diminishing their efficacy in handling noisy labels.
+To this end, we propose an Asymmetric Co-Training (ACT) method to mitigate the detrimental effects of label noise. 
+Specifically, we introduce an asymmetric training framework in which one model (i.e., RTM) is robustly trained with a selected subset of clean samples while the other (i.e., NTM) is conventionally trained using the entire training set.
+We propose two novel criteria based on agreement and discrepancy between models, establishing asymmetric sample selection and mining.
+Moreover, a metric, derived from the divergence between models, is devised to quantify label memorization, guiding our method in determining the optimal stopping point for sample mining.
+Finally, we propose to dynamically re-weight identified clean samples according to their reliability inferred from historical information.
+We additionally employ consistency regularization to achieve further performance improvement.
+Extensive experimental results on synthetic and real-world datasets demonstrate the effectiveness and superiority of our method.
 
 
 # Pipeline
